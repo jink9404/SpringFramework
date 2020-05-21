@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+<bean id="bean" class="ex04_xml_list.ListBean">
+	<property name="intList" > <!--  setIntList()-->
+	<list>
+		<value>10</value>
+		<value>20</value>
+		<value>30</value>
+		<value>40</value>
+	</list>
+	</property>
+	<property name="memberList">
+	<list>
+		<ref bean="m1"/>
+		<ref bean="m2"/>
+	</list>
+	</property>
+</bean>
+
+<bean id="m1" class="ex04_xml_list.MemberBean">
+	<constructor-arg value="홍길동"/>
+	<constructor-arg value="23"/>
+	<constructor-arg value="아몰랑"/>
+</bean>
+<bean id="m2" class="ex04_xml_list.MemberBean">
+	<property name="name" value="홍길자"/>
+	<property name="age" value="22"/>
+	<property name="message" value="ㅋㅋ"/>
+</bean>
+	
+
+</beans>

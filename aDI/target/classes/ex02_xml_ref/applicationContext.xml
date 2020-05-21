@@ -2,8 +2,8 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-<!-- 1.멤버값 지정하는 방식 setter 이용 -->
-<bean id="member" class="ex02_xml_ref.MemberBean">
+<!-- 1.멤버값 지정하는 방식 setter 이용  scope종류 singleton  -->
+<bean id="member" class="ex02_xml_ref.MemberBean" scope="singleton"> 
 	<property name="name" value="홍길동"/>
 	<property name="age" value="23"/>
 	<property name="message">
@@ -20,4 +20,12 @@
 	</constructor-arg>
 </bean>
 
+<!-- 3. Bean을 맴버로 지정할 때-->
+<bean id="dao" class="ex02_xml_ref.MemberDAO">
+	<constructor-arg ref="member"></constructor-arg>
+</bean>
+<!-- 4. Bean을 맴버로 지정할 때 setter -->
+<bean id="dao2" class="ex02_xml_ref.MemberDAO">
+	<property name="member" ref="member2"/>
+</bean>
 </beans>

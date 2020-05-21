@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!-- pvalue 이용 -->
+<bean id="bean" class="ex03_xml_pvalue.MemberBean" p:name="홍길국" p:age="44" p:message="짝궁화이팅"/>
+<bean id="dao" class="ex03_xml_pvalue.MemberDAO" p:member-ref="bean"/>
+
+
+</beans>
