@@ -12,6 +12,7 @@ public class Main {
 
 		ApplicationContext ctx = new 	ClassPathXmlApplicationContext("exercise/beans.xml"); 
 	
+		
 		Customer customer = (Customer)ctx.getBean("customer");
 	
 		
