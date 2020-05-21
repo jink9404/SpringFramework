@@ -10,7 +10,7 @@ import board.vo.BoardVO;
 public class MainApp {
 	public static void main(String[] args) {
 		// 1. Spring 컨테이너를 구동한다.
-		AbstractApplicationContext container = new GenericXmlApplicationContext("applicationContext.xml");
+		AbstractApplicationContext container = new GenericXmlApplicationContext("ApplicationContext.xml");
 
 		// 2. Spring 컨테이너로부터 BoardServiceImpl 객체를 Lookup한다.
 		BoardService boardService = (BoardService) container.getBean("boardService");
