@@ -1,5 +1,7 @@
 package exercise.order.domain;
 
+// DB table structure VO DTO domain
+
 public class Customer {
 	private long id;
 	private String name;
