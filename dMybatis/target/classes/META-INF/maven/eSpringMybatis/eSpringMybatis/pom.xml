@@ -46,7 +46,7 @@
 	    <version>5.0.8.RELEASE</version>
 	</dependency>
 
-	<!-- DBCP 필요 -->
+	<!-- DBCP DataBase Connection Pool 필요 -->
 	<dependency>
 	    <groupId>commons-dbcp</groupId>
 	    <artifactId>commons-dbcp</artifactId>

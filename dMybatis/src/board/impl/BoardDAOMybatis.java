@@ -3,13 +3,15 @@ package board.impl;
 import java.util.List;
 
 import org.mybatis.spring.SqlSessionTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
 import board.BoardVO;
 
-
+@Repository("boardDAO")
 public class BoardDAOMybatis {
-
-	private SqlSessionTemplate mybatis;
+	@Autowired
+	private SqlSessionTemplate mybatis; //연결객체
 
 	public void insertBoard(BoardVO vo) {
 		System.out.println("===> Mybatis insertBoard() 호출");

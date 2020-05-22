@@ -9,9 +9,9 @@ import board.BoardService;
 import board.BoardVO;
 
 
-
+@Service("boardService")
 public class BoardServiceImpl implements BoardService {
-	
+	@Autowired
 	private BoardDAOMybatis boardDAO;
 
 	public void insertBoard(BoardVO vo) {

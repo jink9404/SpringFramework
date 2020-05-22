@@ -16,8 +16,8 @@ public class MainApp {
 //		boardDAO.insertBoard(vo);
 		
 
-		vo.setSearchCondition("TITLE");
-		vo.setSearchKeyword("");
+		vo.setSearchCondition("writer");
+		vo.setSearchKeyword("길자");
 		List<BoardVO> boardList = boardDAO.getBoardList(vo);
 		for (BoardVO board : boardList) {
 			System.out.println("---> " + board.toString());
