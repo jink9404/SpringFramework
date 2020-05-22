@@ -4,10 +4,11 @@
 	xmlns:aop="http://www.springframework.org/schema/aop"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
-<bean id="targetBean" class="app1_xml.MessageBeanImpl"/>
-<bean id="advice" class="app1_xml.LoggingAdvice"/>
+
+<bean id="targetBean" class="aop1_xml.MessageBeanImpl"/>
+<bean id="advice" class="aop1_xml.LoggingAdvice"/>
 <aop:config>
-	<aop:pointcut expression="execution(public * app1_xml.*.*Hello(..))" id="pointcut"/>
+	<aop:pointcut expression="execution(public * aop1_xml.*.*Hello(..))" id="pointcut"/>
 	<aop:aspect id="aspect" ref="advice">
 		<aop:around method="around" pointcut-ref="pointcut"/>
 	</aop:aspect>

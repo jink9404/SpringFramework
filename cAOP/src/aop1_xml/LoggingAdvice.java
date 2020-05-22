@@ -1,4 +1,4 @@
-package app1_xml;
+package aop1_xml;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 
