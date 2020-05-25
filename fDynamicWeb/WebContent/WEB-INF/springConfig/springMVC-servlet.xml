@@ -6,5 +6,10 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
 <bean class="spring.sample.HelloController"/>
 
+<bean id="membervo" class="example.member.model.MemberVO">
+  <property name="name" value="홍길동"/>
+  <property name="id" value="12345"/>
+  <property name="age" value="22"/>
+</bean>
 <context:component-scan base-package="example.member"/>
 </beans>

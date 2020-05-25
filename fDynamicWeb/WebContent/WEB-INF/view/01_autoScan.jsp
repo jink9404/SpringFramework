@@ -8,7 +8,9 @@
 </head>
 <body>
 autoScan result page. <hr>
-
+ ID : ${vo.id } <br> <%-- src AutoScanController의 Object 받아오기 --%>
+이름 : ${vo.name}<br>
+나이 : ${vo.age }<br>
 
 </body>
 </html>
