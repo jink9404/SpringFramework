@@ -17,10 +17,10 @@
 <h2>데이터 입력받기</h2>
 <form action="board/request.do" method="post">
 <!-- 	#################### MemberVO의 setter -->
-	아이디 : <input type="text" name='id'/>
-	이름 : <input type="text" name='name'/>
-	나이 : <input type="text" name='age'/>
-	<input type="submit" value="전송"/>
+	아이디 : <input type="text" name='id'/> 	<br>
+	이름 : <input type="text" name='name'/> 	<br>
+	나이 : <input type="text" name='age'/>  	<br>
+	<input type="submit" value="전송"/>    	<br>
 </form>
 </body>
 </html>

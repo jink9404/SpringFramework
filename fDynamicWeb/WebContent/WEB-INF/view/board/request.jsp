@@ -9,8 +9,12 @@
 <body>
 회원가입 정보
 <hr>
-아이디 : ${param.id } <br>
-이름 : ${param.name } <br>
-나이 : ${param.age }<br>
+아이디 : ${param.id } <br/>
+이름 : ${param.name } <br/>
+나이 : ${param.age } <br/>
+<hr>
+아이디 : ${memberVO.id } <br/>
+이름 : ${memberVO.name } <br/>
+나이 : ${memberVO.age } <br/>
 </body>
 </html>
