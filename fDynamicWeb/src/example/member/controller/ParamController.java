@@ -32,7 +32,8 @@ public class ParamController {
 		if(vo.getId().equals(userId) && vo.getPass().equals(userPw)) {
 			//로그인 성공
 			session.setAttribute("login", userId);
+			return "loginsucess";
 		}
-		return "04_paramResult";
+		return "loginfail";
 	}
 }
