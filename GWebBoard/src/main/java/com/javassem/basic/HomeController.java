@@ -1,4 +1,4 @@
-package com.kosmo.basic;
+package com.javassem.basic;
 
 import java.text.DateFormat;
 import java.util.Date;
