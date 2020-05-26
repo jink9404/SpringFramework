@@ -2,6 +2,10 @@ package com.javassem.domain;
 
 import java.util.Date;
 
+import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+
 //VO(Value Object)
 
 public class BoardVO {
