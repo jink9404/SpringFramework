@@ -18,6 +18,6 @@ public class RedirectController {
 	@RequestMapping(value = "/insert.do")
 	public String insert() {
 		System.out.println("실제로 DB에 입력됨");
-		return "redirect:select.do";
+		return "redirect:select.do"; 
 	}
 }
