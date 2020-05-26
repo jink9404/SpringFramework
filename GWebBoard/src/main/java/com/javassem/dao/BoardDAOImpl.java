@@ -3,11 +3,14 @@ package com.javassem.dao;
 import java.util.List;
 
 import org.mybatis.spring.SqlSessionTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
 import com.javassem.domain.BoardVO;
 
-
+@Repository("boardDAO")
 public class BoardDAOImpl implements BoardDAO{
-
+	@Autowired
 	private SqlSessionTemplate mybatis;
 
 	public void insertBoard(BoardVO vo) {

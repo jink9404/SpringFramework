@@ -44,8 +44,8 @@
 		WHERE SEQ = #{seq}
 		]]>
 	</select>
-	
-	<select id="getBoardList" resultMap="boardResult">
+	<!-- resulMap은 확인만 -->
+	<select id="getBoardList" resultType="board">
 		<![CDATA[
 		SELECT *
 		FROM BOARD
