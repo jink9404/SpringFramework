@@ -32,7 +32,17 @@ $(function(){
 	
 	//아이디 중복체크
 	$('#userId').keyup(function(){
-        
+        //비동기 통신 = AJAX
+		$.ajax({
+			type:'post',
+			async:true,
+			url : 'idCheck.do',
+			contentType :'application/x-www-form-urlencoded;charset=UTF-8',
+			data : "userId="+ $('#userId').val(),
+			success : function(resultData){
+				$('#idCheckResult').html(resultData);
+			}
+		});
        
 	})
 })

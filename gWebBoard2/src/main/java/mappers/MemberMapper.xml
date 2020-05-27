@@ -9,5 +9,10 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	VALUES(#{userId},#{userPass},#{userName})
 </insert>
 
-
+<select id="idCheck" parameterType="member" resultType="member">
+	SELECT * FROM member WHERE userid = #{userId}
+	<if test="userPass != null">
+	AND userpass=#{userPass}
+	</if>
+</select>
 </mapper>

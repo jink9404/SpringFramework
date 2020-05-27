@@ -8,6 +8,5 @@
 </head>
 <body>
 	${message }
-	축하합니다
 </body>
 </html>
