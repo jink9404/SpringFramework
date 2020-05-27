@@ -41,7 +41,7 @@
  사이트에 접속하기 위해서 사용자 인증 절차가 필요합니다.<p>
 아이디와 패스워드를 입력하세요.</h4>
 
-	<form name="form" action="login.do" method="post">
+	<form name="form" action="/gWebBoard3/user/login.do" method="post">
   <table width="300" height="120" >
     <tr> 
       <td width="100"> 아이디</td>
@@ -54,7 +54,7 @@
   <tr>
   <td colspan=2>
     <input type="button" name="Submit" id="Submit" value="로그인">
-    <input type="button"  value="회원가입" onclick="location.href='userJoin.do'">
+    <input type="button"  value="회원가입" onclick="location.href='/gWebBoard3/user/userJoin.do'">
     <input type="reset" value="취소">
 	
 </td>

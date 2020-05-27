@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -28,11 +30,17 @@ public class BoardController {
 	
 		// 글 목록 검색
 		@RequestMapping("/getBoardList.do")
-		public void getBoardList(BoardVO vo, Model model) {
-			
-			model.addAttribute("boardList", boardService.getBoardList(vo));
+		public String getBoardList(BoardVO vo, Model model,HttpSession session) {
+			if(session.getAttribute("userName")==null ||session.getAttribute("userName").equals("")) {
+				return "user/userLogin";
+			}
 			// ViewResolver를 지정하지 않으면 아래처럼 페이지명 지정
 			// return "views/getBoardList.jsp"; // View 이름 리턴
+			else {
+				model.addAttribute("boardList", boardService.getBoardList(vo));
+				return "getBoardList";
+			}
+
 		}
 	
 		// 글 등록

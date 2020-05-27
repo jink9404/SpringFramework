@@ -12,6 +12,6 @@
 
 <p> <a href='user/userLogin.do'>로그인</a> </p>
 <p> <a href='user/userJoin.do'>회원가입</a></p>
-
+<p> <a href="getBoardList.do">글 목록 바로가기</a></p>
 </body>
 </html>

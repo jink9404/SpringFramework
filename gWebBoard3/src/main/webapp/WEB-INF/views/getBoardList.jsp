@@ -26,7 +26,7 @@
 				<!-- 프라퍼티이름 변경 -->
 				<tr>
 					<td>${board.b_id }</td>
-					<td align="left"><a href="getBoard.do?b_id=${board.b_id }">
+					<td align="left"><a href="/gWebBoard3/getBoard.do?b_id=${board.b_id }">
 							${board.b_title }</a></td>
 					<td>${board.b_name }</td>
 					<td>${board.b_date }</td>
@@ -46,6 +46,6 @@
 				</tr>
 			</c:forEach>
 		</table>
-		<br> <a href="insertBoard.do">새글 등록</a>
+		<br> <a href="/gWebBoard3/insertBoard.do">새글 등록</a>
 </body>
 </html>

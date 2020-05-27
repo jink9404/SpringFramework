@@ -10,7 +10,7 @@
 		<!-- 1. 폼태그에 속성 추가  -->
 <!-- 		#######################################################################
 <!-- 		파일업로드 시 필수 method ="post" enctype="multipart/form-data" -->
-		<form action="saveBoard.do" method="post" enctype="multipart/form-data"> 
+		<form action="/gWebBoard3/saveBoard.do" method="post" enctype="multipart/form-data"> 
 			<table border="1" cellpadding="0" cellspacing="0">
 				<!-- 2. 각 항목에  name 맞추기 -->
 				<tr>
@@ -48,6 +48,6 @@
 			</table>
 		</form>
 		<hr>
-		<a href="getBoardList.do">글 목록 가기</a>
+		<a href="/gWebBoard3/getBoardList.do">글 목록 가기</a>
 </body>
 </html>
