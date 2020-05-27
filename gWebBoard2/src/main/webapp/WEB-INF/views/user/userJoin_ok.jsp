@@ -7,6 +7,7 @@
 <title>성공</title>
 </head>
 <body>
+	${message }
 	축하합니다
 </body>
 </html>
