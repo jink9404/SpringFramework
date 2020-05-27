@@ -1,8 +1,6 @@
 package com.javassem.domain;
 
 import java.io.File;
-import java.io.IOException;
-
 import org.springframework.web.multipart.MultipartFile;
 
 public class BoardVO {
@@ -19,8 +17,29 @@ public class BoardVO {
 	private long b_fsize;
 	
 	//*************************************************
-
+	MultipartFile file;//(****) file 변수이름이 폼에 <input type='file' name='여기와 같아야함'/>
 	
+	
+	public MultipartFile getFile() {
+		return file;
+	}
+	public void setFile(MultipartFile file) {
+		this.file = file;
+		
+		if(!file.isEmpty()) {
+			// MultipartFile에서 파일명과 크기만 얻어오기 ->DB에 입력
+			this.b_fname = file.getOriginalFilename();
+			this.b_fsize = file.getSize();
+			
+			File f = new File("E:\\KOSMO\\springwork\\gWebBoard1\\src\\main\\resources\\upload\\"+ b_fname);
+			try {
+				file.transferTo(f);
+			}catch (Exception e) {
+				System.out.println("파일 전송실패:" + e.getMessage());
+				e.printStackTrace();
+			}
+		}
+	}
 	
 	
 	public int getB_id() {

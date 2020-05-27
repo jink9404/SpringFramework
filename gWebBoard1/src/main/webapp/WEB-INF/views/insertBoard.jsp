@@ -8,35 +8,38 @@
 		<h1>글 등록</h1>		
 		<hr>
 		<!-- 1. 폼태그에 속성 추가  -->
-		<form action="saveBoard.do"> 
+<!-- 		#######################################################################
+<!-- 		파일업로드 시 필수 method ="post" enctype="multipart/form-data" -->
+		<form action="saveBoard.do" method="post" enctype="multipart/form-data"> 
 			<table border="1" cellpadding="0" cellspacing="0">
 				<!-- 2. 각 항목에  name 맞추기 -->
 				<tr>
 					<td bgcolor="orange" width="70">제목</td>
-					<td align="left"><input type="text"/></td>
+					<td align="left"><input type="text" name="b_title"/></td>
 				</tr>
 				<tr>
-					<td bgcolor="orange">작성자</td>
-					<td align="left"><input type="text" size="10" /></td>
+					<td bgcolor="orange" >작성자</td>
+					<td align="left"><input type="text" size="10" name="b_name"/></td>
 				</tr>
 				<tr>
 					<td bgcolor="orange">내용</td>
-					<td align="left"><textarea cols="40" rows="10"></textarea></td>
+					<td align="left"><textarea cols="40" rows="10" name="b_content"></textarea></td>
 				</tr>
 				<!-- 추가항목 시작 -->
 				<tr>
 					<td bgcolor="orange">이메일</td>
-					<td align="left"><input type="text" /></td>
+					<td align="left"><input type="text" name="b_email"/></td>
 				</tr>
 				<tr>
 					<td bgcolor="orange">비밀번호</td>
-					<td align="left"><input type="text" />
-					<input type="hidden" value="<%=request.getRemoteAddr()%>"> 
+					<td align="left"><input type="text" name="b_pwd"/>
+					<input type="hidden" name="b_ip" value="<%=request.getRemoteAddr()%>"> 
 					</td>
 				</tr>
 				<tr>
 					<td bgcolor="orange" width="70">파일추가</td><td align="left">
-					<input type="file" maxlength="60" size="40"></td>
+<!-- 					##########  name은 BoardVO.class MultipartFile 의 변수이름임 ################ -->
+					<input type="file" name="file" maxlength="60" size="40"></td>
 				</tr>
 				<!-- 추가항목 끝 -->
 				<tr>

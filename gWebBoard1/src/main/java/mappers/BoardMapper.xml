@@ -5,7 +5,18 @@
 
 
 	<insert id="insertBoard" parameterType="board">
-
+	insert into uploadtemp(b_id, b_name,b_email,b_title, b_content,   
+   b_pwd, b_date,b_count, b_ip
+   	<if test="b_fname != null">
+	,b_fname, b_fsize
+	</if>
+   ) values(
+    uploadtemp_bid_seq.nextval,#{b_name},#{b_email},#{b_content},#{b_title},
+    #{b_pwd},sysdate,0,#{b_ip}
+	<if test="b_fname != null">
+	,#{b_fname}, #{b_fsize}
+	</if>
+	)
 	</insert>
 
 	<select id="getBoardList" resultType="board">
